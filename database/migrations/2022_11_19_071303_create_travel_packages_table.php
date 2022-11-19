@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-            $table->string('locaiton');
+            $table->string('location');
             $table->longText('about');
             $table->string('featured_event');
             $table->string('language');
