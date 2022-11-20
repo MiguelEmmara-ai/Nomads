@@ -28,4 +28,9 @@ class TravelPackage extends Model
     //     'password',
     //     'remember_token',
     // ];
+
+    public function galleries()
+    {
+        return $this->hasMany(Gallery::class, 'travel_package_id', 'id');
+    }
 }
