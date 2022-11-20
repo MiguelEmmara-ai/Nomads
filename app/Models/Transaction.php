@@ -18,10 +18,7 @@ class Transaction extends Model
         'transaction_status',
     ];
 
-    // protected $hidden = [
-    //     'password',
-    //     'remember_token',
-    // ];
+    protected $hidden = [];
 
     public function details()
     {
@@ -30,11 +27,11 @@ class Transaction extends Model
 
     public function travel_package()
     {
-        return $this->hasMany(TravelPackage::class, 'travel_packages_id', 'id');
+        return $this->belongsTo(TravelPackage::class, 'travel_packages_id', 'id');
     }
 
     public function user()
     {
-        return $this->hasMany(User::class, 'users_id', 'id');
+        return $this->belongsTo(User::class, 'users_id', 'id');
     }
 }
