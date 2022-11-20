@@ -100,68 +100,62 @@
 
         <section class="section-testimonials-heading" id="testimonialsHeading">
             <div class="container">
-              <div class="row">
-                <div class="col text-center">
-                  <h2>They Are Loving Us</h2>
-                  <p>
-                    Moments were giving them
-                    <br />
-                    the best experience
-                  </p>
+                <div class="row">
+                    <div class="col text-center">
+                        <h2>They Are Loving Us</h2>
+                        <p>
+                            Moments were giving them
+                            <br />
+                            the best experience
+                        </p>
+                    </div>
                 </div>
-              </div>
             </div>
-          </section>
+        </section>
 
-        <section class="section section-testimonial-content" id="testimonialContent">
+        <section class="section-testimonials-content" id="testimonialsContent">
             <div class="container">
-                <div class="section-popular-travel row justify-content-center">
+                <div class="section-popular-travel row justify-content-center match-height">
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
-                            <div class="testiominal-content">
-                                <img src="frontend/images/testimonial-1.png" alt="User" class="mb-4 rounded-circle" />
+                            <div class="testimonial-content">
+                                <img src="frontend/images/avatar-1.png" alt="" class="mb-4 rounded-circle" />
                                 <h3 class="mb-4">Angga Risky</h3>
-                                <p class="testimonial">
+                                <p class="testimonials">
                                     “ It was glorious and I could not stop to say wohooo for
                                     every single moment Dankeeeeee “
                                 </p>
                             </div>
                             <hr />
-                            <p class="trip-to mt-2">
-                                Trip to Ubud
-                            </p>
+                            <p class="trip-to mt-2">Trip to Ubud</p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
-                            <div class="testiominal-content">
-                                <img src="frontend/images/testimonial-2.png" alt="User" class="mb-4 rounded-circle" />
+                            <div class="testimonial-content">
+                                <img src="frontend/images/avatar-2.png" alt="" class="mb-4 rounded-circle" />
                                 <h3 class="mb-4">Shayna</h3>
-                                <p class="testimonial">
+                                <p class="testimonials">
                                     “ The trip was amazing and I saw something beautiful in that
                                     Island that makes me want to learn more “
                                 </p>
                             </div>
                             <hr />
-                            <p class="trip-to mt-2">
-                                Trip to Nusa Penida
-                            </p>
+                            <p class="trip-to mt-2">Trip to Nusa Penida</p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
-                            <div class="testiominal-content">
-                                <img src="frontend/images/testimonial-3.png" alt="User" class="mb-4 rounded-circle" />
+                            <div class="testimonial-content mb-auto">
+                                <img src="frontend/images/avatar-3.png" alt="" class="mb-4 rounded-circle" />
                                 <h3 class="mb-4">Shabrina</h3>
-                                <p class="testimonial">
+                                <p class="testimonials">
                                     “ I loved it when the waves was shaking harder — I was
                                     scared too “
                                 </p>
                             </div>
                             <hr />
-                            <p class="trip-to mt-2">
-                                Trip to Karimun Jawa
-                            </p>
+                            <p class="trip-to mt-2">Trip to Karimun Jawa</p>
                         </div>
                     </div>
                 </div>
@@ -170,12 +164,13 @@
                         <a href="#" class="btn btn-need-help px-4 mt-4 mx-1">
                             I Need Help
                         </a>
-                        <a href="{{ route('register') }}" class="btn btn-get-started px-4 mt-4 mx-1">
+                        <a href="#" class="btn btn-get-started px-4 mt-4 mx-1">
                             Get Started
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 @endsection
