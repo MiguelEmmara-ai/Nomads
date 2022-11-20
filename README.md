@@ -44,5 +44,8 @@ php artisan migrate
 php artisan serve
 ```
 
+## Screenshots
+![Screenshot 1](https://github.com/MiguelEmmara-ai/Nomads/blob/master/screenshots/Nomads-ss.png)
+
 ## License
 Copyright 2022. Code released under the MIT license.
