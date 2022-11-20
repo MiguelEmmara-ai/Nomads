@@ -23,21 +23,22 @@
     </header>
 
     <main>
+        
         <div class="container">
             <section class="section-stats row justify-content-center" id="stats">
-                <div class="col-3 col-md-2 stats-detail">
+                <div class="col-4 col-md-2 stats-detail">
                     <h2>20K</h2>
                     <p>Members</p>
                 </div>
-                <div class="col-3 col-md-2 stats-detail">
+                <div class="col-4 col-md-2 stats-detail">
                     <h2>12</h2>
                     <p>Countries</p>
                 </div>
-                <div class="col-3 col-md-2 stats-detail">
+                <div class="col-4 col-md-2 stats-detail">
                     <h2>3K</h2>
                     <p>Hotel</p>
                 </div>
-                <div class="col-3 col-md-2 stats-detail">
+                <div class="col-4 col-md-2 stats-detail">
                     <h2>72</h2>
                     <p>Partners</p>
                 </div>
