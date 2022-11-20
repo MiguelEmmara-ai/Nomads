@@ -9,7 +9,7 @@
                                 <h5>FEATURES</h5>
                                 <ul class="list-unstyled">
                                     <li>
-                                        <a href="#">Reviews</a>
+                                        <a href="{{ route('home') }}#testimonialsHeading">Reviews</a>
                                     </li>
                                     <li>
                                         <a href="#">Community</a>
@@ -56,7 +56,7 @@
     <div class="container-fluid">
         <div class="row border-top justify-content-center align-items-center pt-4">
             <div class="col-auto text-gray-500 font-weight-light">
-                2019 Copyright Nomads • All rights reserved • Made in Jakarta
+                2022 Copyright Nomads • All rights reserved • Made in New Zealand
             </div>
         </div>
     </div>

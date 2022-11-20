@@ -13,37 +13,43 @@
         <div class="collapse navbar-collapse" id="navb">
             <ul class="navbar-nav ml-auto mr-3">
                 <li class="nav-item mx-md-2">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a href="/" class="nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a>
                 </li>
                 <li class="nav-item mx-md-2">
-                    <a class="nav-link" href="#">Paket Travel</a>
+                    <a class="nav-link" href="#popular">Paket Travel</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    {{-- <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Services
+                    </a> --}}
+                    <a href="#" id="navbardrop" data-toggle="dropdown"
+                        class="nav-link dropdown-toggle {{ request()->is('login*') ? 'active' : '' }} {{ request()->is('register*') ? 'active' : '' }}">
                         Services
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Link 1</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
+                        <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                        <a class="dropdown-item" href="{{ route('register') }}">Register</a>
+                        <a class="dropdown-item" href="{{ route('home') }}#popular">Popular Travel Package</a>
                     </div>
                 </li>
                 <li class="nav-item mx-md-2">
-                    <a class="nav-link" href="#">Testimonial</a>
+                    <a class="nav-link" href="{{ route('home') }}#testimonialsHeading">Testimonial</a>
                 </li>
             </ul>
 
             @guest
                 <!-- Mobile button -->
                 <form class="form-inline d-sm-block d-md-none">
-                    <button class="btn btn-login my-2 my-sm-0" type="button" onclick="event.preventDefault(); location.href='{{ url('login') }}';">
+                    <button class="btn btn-login my-2 my-sm-0" type="button"
+                        onclick="event.preventDefault(); location.href='{{ url('login') }}';">
                         Masuk
                     </button>
                 </form>
 
                 <!-- Desktop Button -->
                 <form class="form-inline my-2 my-lg-0 d-none d-md-block">
-                    <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4" type="button" onclick="event.preventDefault(); location.href='{{ url('login') }}';">
+                    <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4" type="button"
+                        onclick="event.preventDefault(); location.href='{{ url('login') }}';">
                         Masuk
                     </button>
                 </form>

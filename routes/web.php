@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\TravelPackageController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\SupportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,9 @@ Route::get('/checkout/remove/{detail_id}', [CheckoutController::class, 'remove']
 Route::get('/checkout/confirm/{id}', [CheckoutController::class, 'success'])
     ->name('checkout-success')
     ->middleware(['auth', 'verified']);
+
+    Route::get('/support', [SupportController::class, 'index'])
+    ->name('support'); 
 
 Route::prefix('admin')
     ->middleware(['auth', 'admin'])
