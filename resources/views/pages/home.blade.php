@@ -98,20 +98,20 @@
             </div>
         </section>
 
-        <section class="section-testimonial-heading" id="testimonialHeading">
+        <section class="section-testimonials-heading" id="testimonialsHeading">
             <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        <h2>They Are Loving Us</h2>
-                        <p>
-                            Moments were giving them
-                            <br />
-                            the best experience
-                        </p>
-                    </div>
+              <div class="row">
+                <div class="col text-center">
+                  <h2>They Are Loving Us</h2>
+                  <p>
+                    Moments were giving them
+                    <br />
+                    the best experience
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
+          </section>
 
         <section class="section section-testimonial-content" id="testimonialContent">
             <div class="container">
