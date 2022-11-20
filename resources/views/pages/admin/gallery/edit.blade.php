@@ -6,7 +6,7 @@
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Edit Paket Travel {{ $item->title }}</h1>
+            <h1 class="h3 mb-0 text-gray-800">Edit Gallery</h1>
         </div>
 
         @if ($errors->any())
@@ -21,58 +21,29 @@
 
         <div class="card shadow">
             <div class="card-body">
-                <form action="{{ route('gallery.update', $item->id) }}" method="post">
+                <form action="{{ route('gallery.update', $item->id) }}" method="post" enctype="multipart/form-data">
                     @method('PUT')
                     @csrf
+
                     <div class="form-group">
-                        <label for="title">Title</label>
-                        <input type="text" class="form-control" name="title" placeholder="Title"
-                            value="{{ $item->title }}">
+                        <label for="travel_packages_id">Paket Travel</label>
+                        <select name="travel_packages_id" class="form-control">
+                            <option value="{{ $item->travel_packages_id }}">Jangan Diubah</option>
+
+                            @foreach ($travel_packages as $travel_package)
+                                <option value="{{ $travel_package->id }}">
+                                    {{ $travel_package->title }}
+                                </option>
+                            @endforeach
+
+                        </select>
                     </div>
+
                     <div class="form-group">
-                        <label for="location">Location</label>
-                        <input type="text" class="form-control" name="location" placeholder="Location"
-                            value="{{ $item->location }}">
+                        <label for="image">Images</label>
+                        <input type="file" name="image" class="form-control" placeholder="Image">
                     </div>
-                    <div class="form-group">
-                        <label for="about">About</label>
-                        <textarea name="about" rows="10" class="d-block w-100 form-control">{{ $item->about }}</textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="featured_event">Featured Event</label>
-                        <input type="text" class="form-control" name="featured_event"
-                            placeholder="Music Festivales, Foods" value="{{ $item->featured_event }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="language">Language</label>
-                        <input type="text" class="form-control" name="language" placeholder="English"
-                            value="{{ $item->language }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="foods">Foods</label>
-                        <input type="text" class="form-control" name="foods" placeholder="Nasi Goreng, Rendang"
-                            value="{{ $item->foods }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="departure_date">Departure Date</label>
-                        <input type="date" class="form-control" name="departure_date" placeholder="Departure Date"
-                            value="{{ $item->departure_date }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="duration">Duration</label>
-                        <input type="text" class="form-control" name="duration" placeholder="3 Days"
-                            value="{{ $item->duration }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="type">Type</label>
-                        <input type="text" class="form-control" name="type" placeholder="Open Trip"
-                            value="{{ $item->type }}">
-                    </div>
-                    <div class="form-group">
-                        <label for="type">Price</label>
-                        <input type="number" class="form-control" name="price" placeholder="$500"
-                            value="{{ $item->price }}">
-                    </div>
+
                     <button type="submit" class="btn btn-primary btn-block">Ubah</button>
                 </form>
             </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\GalleryRequest;
 use App\Models\Gallery;
+use App\Models\TravelPackage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -31,7 +32,10 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.gallery.create');
+        $travel_packages = TravelPackage::all();
+        return view('pages.admin.gallery.create', [
+            'travel_packages' => $travel_packages
+        ]);
     }
 
     /**
@@ -43,7 +47,10 @@ class GalleryController extends Controller
     public function store(GalleryRequest $request)
     {
         $data = $request->all();
-        $data['slug'] = str::slug($request->title);
+        $data['image'] = $request->file('image')->store(
+            'assets/gallery',
+            'public'
+        );
 
         Gallery::create($data);
 
@@ -70,9 +77,11 @@ class GalleryController extends Controller
     public function edit($id)
     {
         $item = Gallery::findOrFail($id);
+        $travel_packages = TravelPackage::all();
 
-        return view('pages.admin.gallery.edit' ,[
-            'item' => $item
+        return view('pages.admin.gallery.edit', [
+            'item' => $item,
+            'travel_packages' => $travel_packages
         ]);
     }
 
@@ -86,7 +95,10 @@ class GalleryController extends Controller
     public function update(GalleryRequest $request, $id)
     {
         $data = $request->all();
-        $data['slug'] = Str::slug($request->title);
+        $data['image'] = $request->file('image')->store(
+            'assets/gallery',
+            'public'
+        );
 
         $item = Gallery::findOrFail($id);
 
