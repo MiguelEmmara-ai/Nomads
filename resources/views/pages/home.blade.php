@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    <!-- Header -->
     <header class="text-center">
         <h1>
             Explore The Beautiful World
@@ -16,8 +17,8 @@
             <br />
             moment you never see before
         </p>
-        <a href="#" class="btn btn-get-started px-4 mt-4">
-            Get Started
+        <a href="#popular" class="btn btn-get-started px-4 mt-4">
+            Get started
         </a>
     </header>
 
@@ -34,7 +35,7 @@
                 </div>
                 <div class="col-3 col-md-2 stats-detail">
                     <h2>3K</h2>
-                    <p>Hotels</p>
+                    <p>Hotel</p>
                 </div>
                 <div class="col-3 col-md-2 stats-detail">
                     <h2>72</h2>
@@ -42,6 +43,7 @@
                 </div>
             </section>
         </div>
+
         <section class="section-popular" id="popular">
             <div class="container">
                 <div class="row">
@@ -56,60 +58,28 @@
                 </div>
             </div>
         </section>
+
         <section class="section-popular-content" id="popularContent">
             <div class="container">
                 <div class="section-popular-travel row justify-content-center">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card-travel text-center d-flex flex-column"
-                            style="background-image: url('frontend/images/travel-1.jpg');">
-                            <div class="travel-country">INDONESIA</div>
-                            <div class="travel-location">DERATAN, BALI</div>
-                            <div class="travel-button mt-auto">
-                                <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">
-                                    View Details
-                                </a>
+                    @foreach ($items as $item)
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="card-travel text-center d-flex flex-column"
+                                style="background-image: url('{{ $item->galleries->count() ? Storage::url($item->galleries->first()->image) : '' }}');">
+                                <div class="travel-country">{{ $item->location }}</div>
+                                <div class="travel-location">{{ $item->title }}</div>
+                                <div class="travel-button mt-auto">
+                                    <a href="{{ route('detail', $item->slug) }}" class="btn btn-travel-details px-4">
+                                        View Details
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card-travel text-center d-flex flex-column"
-                            style="background-image: url('frontend/images/travel-2.jpg');">
-                            <div class="travel-country">INDONESIA</div>
-                            <div class="travel-location">BROMO, MALANG</div>
-                            <div class="travel-button mt-auto">
-                                <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">
-                                    View Details
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card-travel text-center d-flex flex-column"
-                            style="background-image: url('frontend/images/travel-3.jpg');">
-                            <div class="travel-country">INDONESIA</div>
-                            <div class="travel-location">NUSA PENIDA</div>
-                            <div class="travel-button mt-auto">
-                                <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">
-                                    View Details
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card-travel text-center d-flex flex-column"
-                            style="background-image: url('frontend/images/travel-4.jpg');">
-                            <div class="travel-country">INDONESIA</div>
-                            <div class="travel-location">DUBAI</div>
-                            <div class="travel-button mt-auto">
-                                <a href="{{ route('detail') }}" class="btn btn-travel-details px-4">
-                                    View Details
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
+
         <section class="section-networks" id="networks">
             <div class="container">
                 <div class="row">
@@ -122,12 +92,13 @@
                         </p>
                     </div>
                     <div class="col-md-8 text-center">
-                        <img src="frontend/images/partner.png" class="img-patner" />
+                        <img src="frontend/images/partner.png" alt="Logo Partner" class="img-partner" />
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section-testimonials-heading" id="testimonialsHeading">
+
+        <section class="section-testimonial-heading" id="testimonialHeading">
             <div class="container">
                 <div class="row">
                     <div class="col text-center">
@@ -141,49 +112,56 @@
                 </div>
             </div>
         </section>
-        <section class="section-testimonials-content" id="testimonialsContent">
+
+        <section class="section section-testimonial-content" id="testimonialContent">
             <div class="container">
-                <div class="section-popular-travel row justify-content-center match-height">
+                <div class="section-popular-travel row justify-content-center">
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
-                            <div class="testimonial-content">
-                                <img src="frontend/images/avatar-1.png" alt="" class="mb-4 rounded-circle" />
+                            <div class="testiominal-content">
+                                <img src="frontend/images/testimonial-1.png" alt="User" class="mb-4 rounded-circle" />
                                 <h3 class="mb-4">Angga Risky</h3>
-                                <p class="testimonials">
+                                <p class="testimonial">
                                     “ It was glorious and I could not stop to say wohooo for
                                     every single moment Dankeeeeee “
                                 </p>
                             </div>
                             <hr />
-                            <p class="trip-to mt-2">Trip to Ubud</p>
+                            <p class="trip-to mt-2">
+                                Trip to Ubud
+                            </p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
-                            <div class="testimonial-content">
-                                <img src="frontend/images/avatar-2.png" alt="" class="mb-4 rounded-circle" />
+                            <div class="testiominal-content">
+                                <img src="frontend/images/testimonial-2.png" alt="User" class="mb-4 rounded-circle" />
                                 <h3 class="mb-4">Shayna</h3>
-                                <p class="testimonials">
+                                <p class="testimonial">
                                     “ The trip was amazing and I saw something beautiful in that
                                     Island that makes me want to learn more “
                                 </p>
                             </div>
                             <hr />
-                            <p class="trip-to mt-2">Trip to Nusa Penida</p>
+                            <p class="trip-to mt-2">
+                                Trip to Nusa Penida
+                            </p>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="card card-testimonial text-center">
-                            <div class="testimonial-content mb-auto">
-                                <img src="frontend/images/avatar-3.png" alt="" class="mb-4 rounded-circle" />
+                            <div class="testiominal-content">
+                                <img src="frontend/images/testimonial-3.png" alt="User" class="mb-4 rounded-circle" />
                                 <h3 class="mb-4">Shabrina</h3>
-                                <p class="testimonials">
+                                <p class="testimonial">
                                     “ I loved it when the waves was shaking harder — I was
                                     scared too “
                                 </p>
                             </div>
                             <hr />
-                            <p class="trip-to mt-2">Trip to Karimun Jawa</p>
+                            <p class="trip-to mt-2">
+                                Trip to Karimun Jawa
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -192,7 +170,7 @@
                         <a href="#" class="btn btn-need-help px-4 mt-4 mx-1">
                             I Need Help
                         </a>
-                        <a href="#" class="btn btn-get-started px-4 mt-4 mx-1">
+                        <a href="{{ route('register') }}" class="btn btn-get-started px-4 mt-4 mx-1">
                             Get Started
                         </a>
                     </div>

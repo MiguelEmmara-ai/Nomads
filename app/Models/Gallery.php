@@ -11,14 +11,12 @@ class Gallery extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'travel_packages_id',
-        'image',
+        'travel_packages_id', 'image'
     ];
 
-    // protected $hidden = [
-    //     'password',
-    //     'remember_token',
-    // ];
+    protected $hidden = [
+
+    ];
 
     public function travel_package()
     {
