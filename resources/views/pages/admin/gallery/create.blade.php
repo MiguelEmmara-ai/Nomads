@@ -37,15 +37,17 @@
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="image">Images</label>
-                        <input type="file" name="image" class="form-control" placeholder="Image">
+                    <label for="image">Images</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="image">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="image"
+                                aria-describedby="image" name="image">
+                            <label class="custom-file-label" for="image">Choose file</label>
+                        </div>
                     </div>
-
-                    {{-- <div class="mb-3">
-                        <label for="formFileMultiple" class="form-label">Multiple files input example</label>
-                        <input class="form-control" type="file" id="formFileMultiple" multiple>
-                    </div> --}}
 
                     <button type="submit" class="btn btn-primary btn-block">Simpan</button>
                 </form>

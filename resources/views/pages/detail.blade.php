@@ -7,17 +7,19 @@
         <section class="section-details-content">
             <div class="container">
 
-                <div class="col p-0">
-                    <nav>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                Paket Travel
-                            </li>
-                            <li class="breadcrumb-item active">
-                                Details
-                            </li>
-                        </ol>
-                    </nav>
+                <div class="row">
+                    <div class="col p-0 pl-3 pl-lg-0">
+                        <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    Paket Travel
+                                </li>
+                                <li class="breadcrumb-item active">
+                                    Details
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
                 </div>
                 
                 <div class="row">

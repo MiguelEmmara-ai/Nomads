@@ -19,9 +19,6 @@
                     <a class="nav-link" href="#popular">Paket Travel</a>
                 </li>
                 <li class="nav-item dropdown">
-                    {{-- <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Services
-                    </a> --}}
                     <a href="#" id="navbardrop" data-toggle="dropdown"
                         class="nav-link dropdown-toggle {{ request()->is('login*') ? 'active' : '' }} {{ request()->is('register*') ? 'active' : '' }}">
                         Services

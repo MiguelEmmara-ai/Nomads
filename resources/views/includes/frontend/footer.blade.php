@@ -3,7 +3,7 @@
     <!-- Footer -->
     <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
         <!-- Section: Social media -->
-        <section class="p-3 text-white" style="background-color: #21D192"></section>
+        <section class="p-3 text-white" style="background-color: #FF9E53"></section>
         <!-- Section: Social media -->
 
         <!-- Section: Links  -->
@@ -16,7 +16,7 @@
                         <!-- Content -->
                         <h6 class="text-uppercase fw-bold">Nomads Travel</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            style="width: 60px; background-color: #FF9E53; height: 2px" />
                         <p>
                             Nomads Travel, the best travel package out there, Go explore the world!
                         </p>
@@ -28,7 +28,7 @@
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold">FEATURES</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            style="width: 60px; background-color: #FF9E53; height: 2px" />
                         <p>
                             <a href="{{ route('home') }}#testimonialsHeading" class="text-dark">Reviews</a>
                         </p>
@@ -49,7 +49,7 @@
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold">ACCOUNT</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            style="width: 60px; background-color: #FF9E53; height: 2px" />
                         <p>
                             <a href="{{ route('support') }}" class="text-dark">Refund</a>
                         </p>
@@ -67,7 +67,7 @@
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold">COMPANY</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            style="width: 60px; background-color: #FF9E53; height: 2px" />
                         <p>
                             <a href="#!" class="text-dark">Career</a>
                         </p>
@@ -85,7 +85,7 @@
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold">Contact</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            style="width: 60px; background-color: #FF9E53; height: 2px" />
                         <p><i class="fas fa-home mr-3"></i> Jakarta Selatan, Indonesia</p>
                         <p><i class="fas fa-envelope mr-3"></i> support@support.com</p>
                         <p><i class="fas fa-phone mr-3"></i> 0821 - 2222 - 8888</p>
@@ -102,7 +102,7 @@
             © @php
                 echo date('Y');
             @endphp
-            Copyright:
+            Copyright
             @php
                 $url = route('home');
                 $url = preg_replace("(^https?://)", "", $url );

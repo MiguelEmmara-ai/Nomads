@@ -17,14 +17,14 @@
     </li>
 
     <!-- Nav Item - Paket Travel -->
-    <li class="nav-item {{ request()->is('admin/travel-package') ? 'active' : '' }}">
+    <li class="nav-item {{ request()->is('admin/travel-package*') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('travel-package.index') }}">
             <i class="fas fa-fw fa-hotel"></i>
             <span>Paket Travel</span></a>
     </li>
 
     <!-- Nav Item - Galeri Travel -->
-    <li class="nav-item {{ request()->is('admin/gallery') ? 'active' : '' }}">
+    <li class="nav-item {{ request()->is('admin/gallery*') ? 'active' : '' }}">
         <a class="nav-link" href="{{ route('gallery.index') }}">
             <i class="fas fa-fw fa-images"></i>
             <span>Galeri Travel</span></a>
