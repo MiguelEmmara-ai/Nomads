@@ -53,6 +53,14 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Software Architecture
+
+Laravel framework app deployed on aws ec2
+<br>
+![Screenshot 1](https://github.com/MiguelEmmara-ai/cabs-online/blob/master/public/screenshots/Aws%20Cloud%20Architecture%20-%20Laravel.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Screenshots
 ![Screenshot 1](https://github.com/MiguelEmmara-ai/Nomads/blob/master/screenshots/Nomads-ss.png)
 
